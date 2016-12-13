@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Faire un strnew et pas un simple malloc car si la longueur de s est plus
+** petite que len, alors la fin de tmp sera remplie par des char inconnus.
+*/
+
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*tmp;
