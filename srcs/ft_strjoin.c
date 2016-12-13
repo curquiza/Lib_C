@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** Si l'un des deux est NULL je renvoie le strdup de l'autre
+*/
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*tmp;
