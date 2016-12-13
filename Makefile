@@ -8,7 +8,8 @@ DIR_SRC = srcs
 DIR_OBJ = objs
 DIR_INCL = includes
 
-SRC = $(addprefix $(DIR_SRC)/, ft_memset.c \
+SRC = $(addprefix $(DIR_SRC)/, \
+	  ft_memset.c \
 	  ft_bzero.c \
 	  ft_memcpy.c \
 	  ft_memccpy.c \
