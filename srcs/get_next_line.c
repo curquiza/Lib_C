@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/06 13:24:27 by curquiza          #+#    #+#             */
-/*   Updated: 2016/12/15 15:31:52 by curquiza         ###   ########.fr       */
+/*   Updated: 2016/12/14 17:07:57 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** Vérifie aussi que le fd est sup. à zéro.
 */
 
-static t_file	*ft_create_elem(int fd)
+t_file	*ft_create_elem(int fd)
 {
 	t_file	*new;
 
@@ -32,7 +32,7 @@ static t_file	*ft_create_elem(int fd)
 	return (new);
 }
 
-static t_file	*ft_find_or_create(t_file **begin, int fd)
+t_file	*ft_find_or_create(t_file **begin, int fd)
 {
 	t_file	*current;
 
@@ -62,7 +62,7 @@ static t_file	*ft_find_or_create(t_file **begin, int fd)
 ** En fin de lecture. Supprime le maillon contenant le fd.
 */
 
-static void		ft_remove_file(t_file **begin, int fd)
+void	ft_remove_file(t_file **begin, int fd)
 {
 	t_file	*current;
 	t_file	*supp;
@@ -94,7 +94,7 @@ static void		ft_remove_file(t_file **begin, int fd)
 ** Retourne 1 si un '\n' est trouvé, 0 sinon.
 */
 
-static int		ft_work_with_buff(char *buff, char **line)
+int		ft_work_with_buff(char *buff, char **line)
 {
 	int		i;
 	int		start;
@@ -135,7 +135,7 @@ static int		ft_work_with_buff(char *buff, char **line)
 ** si le fichier se termine par une ligne sans '\n'.
 */
 
-int				get_next_line(const int fd, char **line)
+int		get_next_line(const int fd, char **line)
 {
 	static t_file	*file;
 	t_file			*current;
