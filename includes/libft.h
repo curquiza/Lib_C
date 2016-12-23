@@ -93,4 +93,7 @@ void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstat(t_list *lst, size_t n);
 
+int					ft_intlen_base(int n, int base);
+char				*ft_itoa_base(int value, int base);
+
 #endif
