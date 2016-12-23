@@ -74,6 +74,7 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_lstlast.c \
 	  ft_lstat.c \
 	  get_next_line.c \
+	  ft_intlen_base.c \
 	  ft_itoa_base.c)
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
