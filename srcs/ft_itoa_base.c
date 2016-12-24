@@ -4,14 +4,11 @@
 ** Ne gère pas les négatifs pour les bases != 0
 */
 
-static char		*ft_fill_tabbase(void)
+static void		*ft_fill_tabbase(char *tab)
 {
-	char	*tab;
 	int		i;
 
 	i = 0;
-	if (!(tab = ft_strnew(15)))
-		return (NULL);
 	while (i < 16)
 	{
 		if (i < 10)
@@ -20,19 +17,21 @@ static char		*ft_fill_tabbase(void)
 			tab[i] = '0' + i + 7;
 		i++;
 	}
+	tab[16] = '\0';
 	return (tab);
 }
 
 char			*ft_itoa_base(int value, int base)
 {
 	char	*tab;
-	char	*tab_base;
+	char	tab_base[17];
 	int		i;
 
 	if (base < 2 || base > 16)
 		return (NULL);
 	i = ft_intlen_base(value, base);
-	if (!(tab = ft_strnew(i)) || !(tab_base = ft_fill_tabbase()))
+	ft_fill_tabbase(tab_base);
+	if (!(tab = ft_strnew(i)))
 		return (NULL);
 	i--;
 	tab[0] = '0';
@@ -47,6 +46,5 @@ char			*ft_itoa_base(int value, int base)
 		value = value / base;
 		i--;
 	}
-	ft_strdel(&tab_base);
 	return (tab);
 }
