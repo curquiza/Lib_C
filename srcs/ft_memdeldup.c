@@ -1,7 +1,7 @@
 #include "libft.h"
 
 /*
-** Supprime et free str puis strdup de la source
+** Supprime et free dst, puis malloc dst et copie src dans dst
 ** Retourne -1 en cas d'erreur, 0 sinon.
 */
 
