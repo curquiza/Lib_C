@@ -98,6 +98,7 @@ char				*ft_itoa_base(int value, int base);
 void				ft_putnbr_endl(int n);
 void				ft_puttab(char **tab);
 void				ft_puttab_int(int *tab, int size);
-int					ft_strdeldup(char **str, char *source);
+int					ft_strdeldup(char **dst, char *src);
+int					ft_memdeldup(void **dst, void *src, size_t size);
 
 #endif
