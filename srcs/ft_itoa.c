@@ -25,14 +25,10 @@ char			*ft_itoa(int n)
 	size = ft_intlen(n);
 	if (!(str = ft_strnew(size)))
 		return (NULL);
+	size--;
+	str[0] = '0';
 	if (n < 0)
 		*str = '-';
-	if (n == 0)
-	{
-		*str = '0';
-		return (str);
-	}
-	str[size--] = '\0';
 	while (n != 0)
 	{
 		if (n < 0)
