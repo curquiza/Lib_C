@@ -26,8 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup(s2));
 	if (!s2)
 		return (ft_strdup(s1));
-	if (!(tmp = (char *)malloc(sizeof(*tmp) * (ft_strlen(s1)
-												+ ft_strlen(s2) + 1))))
+	if (!(tmp = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
 	ft_strcpy(tmp, s1);
 	tmp = tmp + ft_strlen(s1);

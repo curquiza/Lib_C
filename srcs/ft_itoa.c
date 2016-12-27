@@ -23,7 +23,7 @@ char			*ft_itoa(int n)
 	int		size;
 
 	size = ft_intlen(n);
-	if (!(str = (char *)malloc(sizeof(*str) * (size + 1))))
+	if (!(str = ft_strnew(size)))
 		return (NULL);
 	if (n < 0)
 		*str = '-';
