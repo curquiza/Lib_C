@@ -100,5 +100,6 @@ void				ft_puttab(char **tab);
 void				ft_puttab_int(int *tab, int size);
 int					ft_strdeldup(char **dst, char *src);
 int					ft_memdeldup(void **dst, void *src, size_t size);
+char				*ft_convbase(char *value, int old_base, int new_base);
 
 #endif
