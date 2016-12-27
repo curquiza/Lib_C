@@ -97,5 +97,6 @@ int					ft_intlen_base(int n, int base);
 char				*ft_itoa_base(int value, int base);
 void				ft_putnbr_endl(int n);
 void				ft_puttab(char **tab);
+void				ft_puttab_int(int *tab, int size);
 
 #endif
