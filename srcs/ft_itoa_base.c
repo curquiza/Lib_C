@@ -1,7 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/12/28 18:06:41 by curquiza          #+#    #+#             */
+/*   Updated: 2016/12/28 18:06:44 by curquiza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
-** Ne gère pas les négatifs pour les bases != 0
+** Ne gère pas les négatifs pour les bases != 10
+** càd : pour une base != 10, si value < 0, ft_itoa_base traitera la valeur
+** absolue de value
 */
 
 static void		*ft_fill_tabbase(char *tab)

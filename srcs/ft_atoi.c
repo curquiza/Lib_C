@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:20:35 by curquiza          #+#    #+#             */
-/*   Updated: 2016/11/29 16:41:45 by curquiza         ###   ########.fr       */
+/*   Updated: 2016/12/28 18:09:15 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int		ft_atoi(const char *str)
 
 	neg = 1;
 	result = 0;
-	//while (*str >= 0 && *str <= 32)
 	while (*str == 9 || *str == 10 || *str == 11 || *str == 12 || *str == 13
 			|| *str == 32)
 		str++;
