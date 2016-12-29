@@ -1,3 +1,4 @@
 objs/*.o
 libft.a
 a.out
+*/*.swp
