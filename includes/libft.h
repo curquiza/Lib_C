@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2016/12/29 15:22:34 by curquiza         ###   ########.fr       */
+/*   Updated: 2016/12/29 15:53:24 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ int					ft_strdeldup(char **dst, char *src);
 int					ft_memdeldup(void **dst, void *src, size_t size);
 char				*ft_convbase(char *value, int old_base, int new_base);
 int					ft_tablen(char **tab);
+void				ft_sorttab_ascii(char **tab);
 
 #endif
