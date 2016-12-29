@@ -78,7 +78,7 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_itoa_base.c \
 	  ft_putnbr_endl.c \
 	  ft_puttab.c \
-	  ft_puttab_int.c \
+	  ft_putinttab.c \
 	  ft_strdeldup.c \
 	  ft_memdeldup.c \
 	  ft_convbase.c)
