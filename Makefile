@@ -81,7 +81,8 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_putinttab.c \
 	  ft_strdeldup.c \
 	  ft_memdeldup.c \
-	  ft_convbase.c)
+	  ft_convbase.c \
+	  ft_tablen.c)
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
 all : $(NAME)
