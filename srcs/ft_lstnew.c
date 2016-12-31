@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 12:08:14 by curquiza          #+#    #+#             */
-/*   Updated: 2016/11/18 16:23:49 by curquiza         ###   ########.fr       */
+/*   Updated: 2016/12/31 17:29:36 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(new->content = ft_memalloc(sizeof(*content) * content_size)))
+		if (!(new->content = ft_memalloc(content_size)))
 			return (NULL);
 		new->content = ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
