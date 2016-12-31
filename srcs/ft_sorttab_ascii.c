@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/29 15:35:10 by curquiza          #+#    #+#             */
-/*   Updated: 2016/12/29 16:01:30 by curquiza         ###   ########.fr       */
+/*   Updated: 2016/12/31 17:36:13 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_sorttab_ascii(char **tab)
 {
 	char	*tmp;
 	int		i;
-	
+
 	if (ft_tablen(tab) == 0 || ft_tablen(tab) == 1)
 		return ;
 	tmp = NULL;
