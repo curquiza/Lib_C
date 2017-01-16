@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2017/01/02 21:49:40 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/01/16 15:51:36 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+/*
+** Libft project - Bases
+*/
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -35,7 +39,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
 char				*ft_strnstr(const char *big, const char *little,
-																	size_t len);
+								size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
@@ -46,7 +50,6 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -72,6 +75,10 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+/*
+** Libft project - Lists
+*/
+
 typedef struct		s_list
 {
 	void			*content;
@@ -86,12 +93,26 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list*lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+/*
+** Libft projetc - Bonus
+*/
+
 int					ft_countwords(char const *s, char c);
 int					ft_intlen(int n);
 int					ft_lstlen(t_list *lst);
 void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstat(t_list *lst, size_t n);
+
+/*
+** GNL project
+*/
+
+# include "get_next_line.h"
+
+/*
+** My additionnal functions
+*/
 
 int					ft_intlen_base(int n, int base);
 char				*ft_itoa_base(int value, int base);
@@ -103,5 +124,6 @@ int					ft_memdeldup(void **dst, void *src, size_t size);
 char				*ft_convbase(char *value, int old_base, int new_base);
 int					ft_tablen(char **tab);
 void				ft_sorttab_ascii(char **tab);
+int					ft_ullintlen(unsigned long long int n);
 
 #endif
