@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2017/01/16 15:51:36 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/01/21 11:27:25 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+/*
+** GNL project
+*/
+
+# include "get_next_line.h"
 
 /*
 ** Libft project - Bases
@@ -103,12 +109,6 @@ int					ft_lstlen(t_list *lst);
 void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstat(t_list *lst, size_t n);
-
-/*
-** GNL project
-*/
-
-# include "get_next_line.h"
 
 /*
 ** My additionnal functions
