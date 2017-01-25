@@ -84,7 +84,10 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_convbase.c \
 	  ft_tablen.c \
 	  ft_sorttab_ascii.c \
-	  ft_ullintlen.c)
+	  ft_ullintlen.c \
+	  ft_putstr_col.c \
+	  ft_putendl_col.c \
+	  ft_putnbr_col.c )
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
 all : $(NAME)
