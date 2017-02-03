@@ -88,7 +88,8 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_putstr_col.c \
 	  ft_putendl_col.c \
 	  ft_putnbr_col.c \
-	  ft_tabdup.c)
+	  ft_tabdup.c \
+	  ft_tabdel.c)
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
 all : $(NAME)
