@@ -80,7 +80,6 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_puttab.c \
 	  ft_putinttab.c \
 	  ft_strdeldup.c \
-	  ft_memdeldup.c \
 	  ft_convbase.c \
 	  ft_tablen.c \
 	  ft_sorttab_ascii.c \
