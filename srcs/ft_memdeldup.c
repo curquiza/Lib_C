@@ -17,13 +17,14 @@
 ** Retourne -1 en cas d'erreur, 0 sinon.
 */
 
-int		ft_memdeldup(void **dst, void *src, size_t size)
+void	*ft_memdeldup(void **src, size_t size)
 {
-	if (!dst || !src)
-		return (-1);
-	ft_memdel(dst);
-	if (!(*dst = ft_memalloc(size)))
-		return (-1);
-	ft_memcpy(*dst, src, size);
-	return (0);
+	void	*tmp;
+
+	if (!src)
+		return (NULL);
+	tmp = ft_memalloc(size);
+	ft_memcpy(tmp, *src, size);
+	ft_memdel(src);
+	return (tmp);
 }
