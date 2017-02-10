@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 11:16:01 by curquiza          #+#    #+#             */
-/*   Updated: 2016/12/09 16:41:53 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/02/10 13:51:07 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup(s1));
 	tmp = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 	ft_strcat(ft_strcpy(tmp, s1), s2);
-	/*ft_strcpy(tmp, s1);
-	tmp = tmp + ft_strlen(s1);
-	ft_strcpy(tmp, s2);
-	tmp = tmp - (ft_strlen(s1));*/
 	return (tmp);
 }
