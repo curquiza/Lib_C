@@ -89,7 +89,9 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_putnbr_col.c \
 	  ft_tabdup.c \
 	  ft_tabdel.c \
-	  ft_strjoin3.c)
+	  ft_strjoin3.c \
+	  ft_lower.c \
+	  ft_upper.c)
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
 all : $(NAME)
@@ -97,17 +99,14 @@ all : $(NAME)
 $(NAME) : $(OBJ) 
 	@ar rc $@ $^
 	@ranlib $@
-	@echo "Make $@ : \033[1;33mOK\033[0m"
 
 $(DIR_OBJ)/%.o: $(DIR_SRC)/%.c
 	@$(CC) -I $(DIR_INCL) -c $< -o $@
 
 clean :
 	@rm -f $(OBJ)
-	@#echo "Make $@_libft : \033[1;33mOK\033[0m"
 
 fclean : clean
 	@rm -f $(NAME)
-	@#echo "Make $@_libft : \033[1;33mOK\033[0m"
 
 re : fclean all
