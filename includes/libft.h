@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2017/02/07 10:32:46 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/22 21:19:17 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,6 @@ void				ft_putnbr_col(int n, char *color, char *colreset);
 char				**ft_tabdup(char **tab);
 void				ft_tabdel(char ***tab);
 char				*ft_strjoin3(char *s1, char *s2, char *s3);
-void				ft_lower(char *s);
-void				ft_upper(char *s);
+void				ft_exit(char *msg, int exit_value);
 
 #endif

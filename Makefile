@@ -90,8 +90,7 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_tabdup.c \
 	  ft_tabdel.c \
 	  ft_strjoin3.c \
-	  ft_lower.c \
-	  ft_upper.c)
+	  ft_exit.c)
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
 all : $(NAME)
@@ -105,8 +104,10 @@ $(DIR_OBJ)/%.o: $(DIR_SRC)/%.c
 
 clean :
 	@rm -f $(OBJ)
+	@#echo "Make $@_libft : \033[1;33mOK\033[0m"
 
 fclean : clean
 	@rm -f $(NAME)
+	@#echo "Make $@_libft : \033[1;33mOK\033[0m"
 
 re : fclean all
