@@ -14,6 +14,6 @@
 
 void	ft_exit(char *msg, int exit_value)
 {
-	ft_putendl(msg);
+	ft_putendl_fd(msg, 2);
 	exit(exit_value);
 }
