@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/27 17:43:07 by curquiza          #+#    #+#             */
-/*   Updated: 2017/01/27 17:56:29 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 14:15:22 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	**ft_tabdup(char **tab)
 		return (NULL);
 	len = ft_tablen(tab);
 	if (!(rslt = (char **)malloc(sizeof(*rslt) * (len + 1))))
-		return (NULL);
+		ft_exit("malloc error", 1);
 	i = 0;
 	while (tab[i])
 	{

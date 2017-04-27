@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 15:54:19 by curquiza          #+#    #+#             */
-/*   Updated: 2016/11/18 18:10:33 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 13:03:27 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (!s || !f)
 		return (NULL);
 	if (!(tmp = (char *)malloc(sizeof(*tmp) * (ft_strlen(s) + 1))))
-		return (0);
+		ft_exit("malloc error", 1);
 	while (s[i])
 	{
 		tmp[i] = (*f)(s[i]);

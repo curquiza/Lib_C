@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 11:27:23 by curquiza          #+#    #+#             */
-/*   Updated: 2017/02/07 10:18:53 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 14:50:52 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ char	*ft_strdup(const char *src)
 	int		len;
 
 	len = ft_strlen(src);
-	if (!(str = ft_strnew(len)))
-		return (NULL);
+	str = ft_strnew(len);
 	i = 0;
 	while (i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/28 18:06:41 by curquiza          #+#    #+#             */
-/*   Updated: 2016/12/28 18:06:44 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 14:50:20 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ char			*ft_itoa_base(int value, int base)
 		return (NULL);
 	i = ft_intlen_base(value, base);
 	ft_fill_tabbase(tab_base);
-	if (!(tab = ft_strnew(i)))
-		return (NULL);
+	tab = ft_strnew(i);
 	i--;
 	tab[0] = '0';
 	if (base == 10 && value < 0)
