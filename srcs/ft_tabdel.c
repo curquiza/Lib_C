@@ -16,6 +16,8 @@ void	ft_tabdel(char ***tab)
 {
 	int		i;
 
+	if (!tab || !(*tab))
+		return ;
 	i = 0;
 	while ((*tab)[i])
 	{
