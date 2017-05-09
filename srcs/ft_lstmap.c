@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 20:24:39 by curquiza          #+#    #+#             */
-/*   Updated: 2016/11/29 16:23:02 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 12:49:36 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	if (!f || !lst)
 		return (NULL);
 	if (!(tmp = (t_list *)malloc(sizeof(*tmp))))
-		return (NULL);
+		ft_exit("malloc error", 1);
 	tmp = (*f)(lst);
 	start = tmp;
 	lst = lst->next;
 	while (lst)
 	{
 		if (!(tmp->next = (t_list *)malloc(sizeof(*tmp))))
-			return (NULL);
+			ft_exit("malloc error", 1);
 		tmp->next = (*f)(lst);
 		tmp = tmp->next;
 		lst = lst->next;

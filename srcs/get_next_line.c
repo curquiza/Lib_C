@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/06 13:24:27 by curquiza          #+#    #+#             */
-/*   Updated: 2016/12/14 17:07:57 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 14:16:36 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_file	*ft_create_elem(int fd)
 	t_file	*new;
 
 	if (!(new = (t_file *)malloc(sizeof(*new))))
-		return (NULL);
+		ft_exit("malloc error", 1);
 	new->fd = fd;
 	if (!(new->buff = ft_strnew(BUFF_SIZE)))
 		return (NULL);

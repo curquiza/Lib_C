@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_putendl2_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/14 18:27:32 by curquiza          #+#    #+#             */
-/*   Updated: 2017/04/27 14:55:58 by curquiza         ###   ########.fr       */
+/*   Created: 2017/04/27 11:25:38 by curquiza          #+#    #+#             */
+/*   Updated: 2017/04/27 11:32:57 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Faire un strnew et pas un simple malloc car si la longueur de s est plus
-** petite que len, alors la fin de tmp sera remplie par des char inconnus.
-*/
-
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_putendl2_fd(char *s1, char *s2, int fd)
 {
-	char	*tmp;
-	size_t	i;
-
-	i = 0;
-	if (!s)
-		return (NULL);
-	tmp = ft_strnew(len);
-	while (s[start + i] != '\0' && i < len)
-	{
-		tmp[i] = s[start + i];
-		i++;
-	}
-	return (tmp);
+	ft_putstr_fd(s1, fd);
+	ft_putendl_fd(s2, fd);
 }

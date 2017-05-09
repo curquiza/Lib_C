@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 10:59:04 by curquiza          #+#    #+#             */
-/*   Updated: 2016/11/14 13:56:43 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 14:14:31 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnew(size_t size)
 	char	*str;
 
 	if (!(str = (char *)malloc(sizeof(*str) * (size + 1))))
-		return (NULL);
+		ft_exit("malloc error", 1);
 	str[size] = '\0';
 	while (size--)
 		str[size] = '\0';

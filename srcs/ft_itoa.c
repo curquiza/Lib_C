@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 18:59:29 by curquiza          #+#    #+#             */
-/*   Updated: 2016/11/29 16:07:07 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 14:18:33 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ char			*ft_itoa(int n)
 	int		size;
 
 	size = ft_intlen(n);
-	if (!(str = ft_strnew(size)))
-		return (NULL);
+	str = ft_strnew(size);
 	size--;
 	str[0] = '0';
 	if (n < 0)

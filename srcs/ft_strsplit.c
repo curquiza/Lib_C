@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 12:56:17 by curquiza          #+#    #+#             */
-/*   Updated: 2016/11/18 14:45:52 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 14:10:26 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	nb_words = ft_countwords(s, c);
 	if (!(tmp = (char **)malloc(sizeof(*tmp) * (nb_words + 1))))
-		return (NULL);
+		ft_exit("malloc error", 1);
 	tmp[nb_words] = 0;
 	while (i < nb_words)
 	{

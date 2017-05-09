@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 12:08:14 by curquiza          #+#    #+#             */
-/*   Updated: 2016/12/31 17:29:36 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/04/27 12:52:26 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	t_list		*new;
 
 	if (!(new = (t_list *)malloc(sizeof(*new))))
-		return (NULL);
+		ft_exit("malloc error", 1);
 	if (content == NULL)
 	{
 		new->content = NULL;
