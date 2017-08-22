@@ -14,7 +14,7 @@
 
 /*
 ** La vraie fonction atoi ne prend pas en compte tous les caractères invisibles
-** inf. à 32
+** inf. à 32 et segfault sur le NULL
 */
 
 int		ft_atoi(const char *str)
@@ -22,6 +22,8 @@ int		ft_atoi(const char *str)
 	int		neg;
 	int		result;
 
+	if (!str)
+		return (0);
 	neg = 1;
 	result = 0;
 	while (*str == 9 || *str == 10 || *str == 11 || *str == 12 || *str == 13
