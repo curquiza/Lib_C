@@ -93,7 +93,10 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_exit.c \
 	  ft_putendl2_fd.c \
 	  ft_putendl3_fd.c \
+	  ft_strupper.c \
 	  ft_putnbr2.c)
+
+OBJ_DIR = objs/
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
 
 all : $(NAME)
@@ -103,10 +106,11 @@ $(NAME) : $(OBJ)
 	@ranlib $@
 
 $(DIR_OBJ)/%.o: $(DIR_SRC)/%.c
+	@mkdir -p $(OBJ_DIR)
 	@$(CC) -I $(DIR_INCL) -c $< -o $@
 
 clean :
-	@rm -f $(OBJ)
+	@rm -rf $(OBJ_DIR)
 	@#echo "Make $@_libft : \033[1;33mOK\033[0m"
 
 fclean : clean
