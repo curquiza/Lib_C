@@ -6,13 +6,13 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 18:21:24 by curquiza          #+#    #+#             */
-/*   Updated: 2017/08/23 18:21:26 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/08/23 18:41:57 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lower(char *s)
+void	ft_strlower(char *s)
 {
 	while (*s)
 	{
