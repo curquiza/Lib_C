@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2017/08/22 15:21:15 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/08/23 18:21:40 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,5 +155,6 @@ void				ft_putendl2_fd(char *s1, char *s2, int fd);
 void				ft_putendl3_fd(char *s1, char *s2, char *s3, int fd);
 void				ft_putnbr2(char *s, int nbr);
 void				ft_strupper(char *s);
+void				ft_strlower(char *s);
 
 #endif

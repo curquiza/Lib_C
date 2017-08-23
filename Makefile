@@ -94,6 +94,7 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_putendl2_fd.c \
 	  ft_putendl3_fd.c \
 	  ft_strupper.c \
+	  ft_strlower.c \
 	  ft_putnbr2.c)
 
 OBJ_DIR = objs/
