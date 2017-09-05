@@ -95,7 +95,8 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_putendl3_fd.c \
 	  ft_strupper.c \
 	  ft_strlower.c \
-	  ft_putnbr2.c)
+	  ft_putnbr2.c \
+	  ft_memjoin.c)
 
 OBJ_DIR = objs/
 OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)

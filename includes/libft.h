@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2017/08/23 18:21:40 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/05 16:13:17 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,5 +156,6 @@ void				ft_putendl3_fd(char *s1, char *s2, char *s3, int fd);
 void				ft_putnbr2(char *s, int nbr);
 void				ft_strupper(char *s);
 void				ft_strlower(char *s);
+void				*ft_memjoin(void *s1, void *s2, size_t size1, size_t size2);
 
 #endif
