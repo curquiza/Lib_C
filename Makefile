@@ -1,13 +1,20 @@
-NAME = libft.a
+NAME = libftprintf.a
 
 FLAG = -Wall -Wextra -Werror
 CC = gcc $(FLAG)
 
-DIR_SRC = srcs
-DIR_OBJ = objs
-DIR_INCL = includes
+SRC = srcs
+C_DIR = $(addprefix $(SRC)/, \
+		ft \
+		gnl \
+		ft_printf) 
 
-SRC = $(addprefix $(DIR_SRC)/, \
+C_FILES = $(addprefix $(SRC)/, \
+		  $(FT) \
+		  $(GNL) \
+		  $(FT_PRINTF))
+
+FT = $(addprefix ft/, \
 	  ft_memset.c \
 	  ft_bzero.c \
 	  ft_memcpy.c \
@@ -72,7 +79,6 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_lstadd_back.c \
 	  ft_lstlast.c \
 	  ft_lstat.c \
-	  get_next_line.c \
 	  ft_intlen_base.c \
 	  ft_itoa_base.c \
 	  ft_putnbr_endl.c \
@@ -97,21 +103,50 @@ SRC = $(addprefix $(DIR_SRC)/, \
 	  ft_putnbr2.c \
 	  ft_memjoin.c)
 
-OBJ_DIR = objs/
-OBJ = $(SRC:$(DIR_SRC)/%.c=$(DIR_OBJ)/%.o)
+GNL = $(addprefix gnl/, \
+	  get_next_line.c)
+
+FT_PRINTF = $(addprefix ft_printf/, \
+		  arg_lst_func.c \
+		  parsing.c \
+		  parsing_tools.c \
+		  numeric_to_str.c \
+		  conv_x_bigx.c \
+		  conv_o_bigo.c \
+		  conv_u_bigu.c \
+		  conv_d_i_bigd.c \
+		  conv_p.c \
+		  conv_c.c \
+		  conv_bigc.c \
+		  conv_s.c \
+		  conv_bigs.c \
+		  conv_percent.c \
+		  conv_b.c \
+		  sign_flags.c \
+		  precision.c \
+		  padding.c \
+		  display.c \
+		  ft_printf.c) 
+
+OBJ = objs/
+O_DIR = $(C_DIR:$(SRC)/%=$(OBJ)/%)
+O_FILES = $(C_FILES:$(SRC)/%.c=$(OBJ)/%.o)
+
+H_DIR = includes
+INCL = -I$(H_DIR)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) 
+$(NAME) : $(O_FILES) 
 	@ar rc $@ $^
 	@ranlib $@
 
-$(DIR_OBJ)/%.o: $(DIR_SRC)/%.c
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) -I $(DIR_INCL) -c $< -o $@
+$(OBJ)/%.o: $(SRC)/%.c $(H_DIR)
+	@mkdir -p $(OBJ) $(O_DIR)
+	@$(CC) $(INCL) -c $< -o $@
 
 clean :
-	@rm -rf $(OBJ_DIR)
+	@rm -rf $(OBJ)
 	@#echo "Make $@_libft : \033[1;33mOK\033[0m"
 
 fclean : clean
