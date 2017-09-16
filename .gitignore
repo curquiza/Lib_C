@@ -1,5 +1,5 @@
-objs/
-objs/*
-libft.a
 a.out
-*/*.swp
+libft.a
+libftprintf.a
+**/**/*.o
+**/**/*.swp
