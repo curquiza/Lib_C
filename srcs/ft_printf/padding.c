@@ -6,11 +6,11 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 20:56:38 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 20:56:39 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/16 15:08:56 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static void	ft_apply_flag_minus(t_arg *current, char *tmp)
 {

@@ -6,11 +6,11 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 20:31:34 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 20:57:23 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/16 15:09:05 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int				ft_go_to_conv(char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 20:54:57 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 20:54:58 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/16 15:08:37 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_cpy_until_percent(char *dst, char *src)
 {

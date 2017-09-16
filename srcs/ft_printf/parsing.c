@@ -6,11 +6,11 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 20:37:45 by curquiza          #+#    #+#             */
-/*   Updated: 2017/09/13 20:37:54 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/16 15:09:00 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_get_flags(char *s, t_arg *current)
 {
