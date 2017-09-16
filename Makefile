@@ -1,4 +1,3 @@
-
 NAME = libft.a
 
 FLAG = -Wall -Wextra -Werror
