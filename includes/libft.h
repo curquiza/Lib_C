@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2017/04/27 12:28:59 by curquiza         ###   ########.fr       */
+/*   Updated: 2017/09/26 15:24:47 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@
 */
 
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 /*
 ** Libft project - Bases
@@ -154,5 +155,8 @@ void				ft_exit(char *msg, int exit_value);
 void				ft_putendl2_fd(char *s1, char *s2, int fd);
 void				ft_putendl3_fd(char *s1, char *s2, char *s3, int fd);
 void				ft_putnbr2(char *s, int nbr);
+void				ft_strupper(char *s);
+void				ft_strlower(char *s);
+void				*ft_memjoin(void *s1, void *s2, size_t size1, size_t size2);
 
 #endif
