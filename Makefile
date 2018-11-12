@@ -12,7 +12,7 @@ endif
 
 CC = gcc $(FLAG)
 
-SRC = srcs
+SRC = src/
 C_DIR = $(addprefix $(SRC)/, \
 		ft \
 		gnl \
@@ -137,11 +137,11 @@ FT_PRINTF = $(addprefix ft_printf/, \
 		  display.c \
 		  ft_printf.c) 
 
-OBJ = objs/
+OBJ = obj/
 O_DIR = $(C_DIR:$(SRC)/%=$(OBJ)/%)
 O_FILES = $(C_FILES:$(SRC)/%.c=$(OBJ)/%.o)
 
-H_DIR = includes
+H_DIR = include
 INCL = -I$(H_DIR)
 
 all : $(NAME)
