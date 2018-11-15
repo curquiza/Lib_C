@@ -151,7 +151,6 @@ void				ft_putnbr_col(int n, char *color, char *colreset);
 char				**ft_tabdup(char **tab);
 void				ft_tabdel(char ***tab);
 char				*ft_strjoin3(char *s1, char *s2, char *s3);
-void				ft_exit(char *msg, int exit_value);
 void				ft_putendl2_fd(char *s1, char *s2, int fd);
 void				ft_putendl3_fd(char *s1, char *s2, char *s3, int fd);
 void				ft_putnbr2(char *s, int nbr);

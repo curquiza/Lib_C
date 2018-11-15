@@ -16,7 +16,7 @@ SRC = src/
 C_DIR = $(addprefix $(SRC)/, \
 		ft \
 		gnl \
-		ft_printf) 
+		ft_printf)
 
 C_FILES = $(addprefix $(SRC)/, \
 		  $(FT) \
@@ -104,7 +104,6 @@ FT = $(addprefix ft/, \
 	  ft_tabdup.c \
 	  ft_tabdel.c \
 	  ft_strjoin3.c \
-	  ft_exit.c \
 	  ft_putendl2_fd.c \
 	  ft_putendl3_fd.c \
 	  ft_strupper.c \
@@ -135,7 +134,7 @@ FT_PRINTF = $(addprefix ft_printf/, \
 		  precision.c \
 		  padding.c \
 		  display.c \
-		  ft_printf.c) 
+		  ft_printf.c)
 
 OBJ = obj/
 O_DIR = $(C_DIR:$(SRC)/%=$(OBJ)/%)
@@ -146,7 +145,7 @@ INCL = -I$(H_DIR)
 
 all : $(NAME)
 
-$(NAME) : $(O_FILES) 
+$(NAME) : $(O_FILES)
 	@ar rc $@ $^
 	@ranlib $@
 
