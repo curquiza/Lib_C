@@ -104,6 +104,7 @@ FT = $(addprefix ft/, \
 	  ft_tabdup.c \
 	  ft_tabdel.c \
 	  ft_strjoin3.c \
+	  ft_exit.c \
 	  ft_putendl2_fd.c \
 	  ft_putendl3_fd.c \
 	  ft_strupper.c \
