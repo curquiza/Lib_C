@@ -6,13 +6,13 @@
 /*   By: curquiza <curquiza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 16:28:41 by curquiza          #+#    #+#             */
-/*   Updated: 2018/11/21 13:27:54 by curquiza         ###   ########.fr       */
+/*   Updated: 2018/11/21 14:26:00 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	t_is_int(char *s)
+t_bool	ft_is_int(char *s)
 {
 	int			i;
 	int			gap;
