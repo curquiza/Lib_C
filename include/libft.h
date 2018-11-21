@@ -6,7 +6,7 @@
 /*   By: curquiza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 12:15:31 by curquiza          #+#    #+#             */
-/*   Updated: 2018/11/21 13:08:15 by curquiza         ###   ########.fr       */
+/*   Updated: 2018/11/21 13:26:15 by curquiza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,14 @@ enum	e_ex_ret
 	FAILURE = EXIT_FAILURE
 };
 
+enum	e_bool
+{
+	FALSE = 0,
+	TRUE = 1
+};
+
 typedef enum e_ex_ret	t_ex_ret;
+typedef enum e_bool		t_bool;
 
 /*
 ** Libft project - Bases
@@ -163,7 +170,7 @@ void				ft_strupper(char *s);
 void				ft_strlower(char *s);
 void				*ft_memjoin(void *s1, void *s2, size_t size1, size_t size2);
 long int			ft_atoli(char *str);
-int					ft_is_int(char *s);
+t_bool				ft_is_int(char *s);
 t_ex_ret			ft_ret_err(char *s);
 t_ex_ret			ft_ret_err2(char *s1, char *s2);
 
